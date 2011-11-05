@@ -1,0 +1,44 @@
+
+@import url('../../../Source/scrollbar.css');
+
+body {
+    background: #fcfcfc;
+    font-family: sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+header,
+nav,
+#main,
+footer {
+    display: block;
+    width: 720px;
+    margin: 0 auto;
+    padding: 20px 0;
+    border-bottom: 1px solid #000;
+}
+
+h1 {
+    margin: 0;
+    color: #000;
+    text-transform: uppercase;
+}
+
+iframe {
+    width: 720px;
+    height: 250px;
+    border: 0;
+}
+
+a {
+    color: #000;
+}
+
+#scrollbar {
+    width: 718px;
+    height: 248px;
+    overflow-y: auto;
+    border: 1px solid #000;
+}
