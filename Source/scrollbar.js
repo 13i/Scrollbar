@@ -1,7 +1,7 @@
 
 var Scrollbar = new Class({
     Implements: Options,
-	options: {
+    options: {
         // Number of pixels the contents moves up adns down
 		step: 10,
         // Interval between 2 moves
@@ -46,7 +46,7 @@ var Scrollbar = new Class({
 		this.scroller.barrow.addEvents({
 			'mousedown': function(e){
 				e.preventDefault();
-				this.timer = this.move.periodical(this.options.interval, this, -this.options.step);
+				this.timer = this.moveOf.periodical(this.options.interval, this, -this.options.step);
 			}.bind(this),
 			'mouseup': function(e){
 				e.preventDefault();
@@ -56,7 +56,7 @@ var Scrollbar = new Class({
 		this.scroller.tarrow.addEvents({
 			'mousedown': function(e){
 				e.preventDefault();
-				this.timer = this.move.periodical(this.options.interval, this, this.options.step);
+				this.timer = this.moveOf.periodical(this.options.interval, this, this.options.step);
 			}.bind(this),
 			'mouseup': function(e){
 				e.preventDefault();
@@ -66,7 +66,7 @@ var Scrollbar = new Class({
 		
 		return this;
 	},
-    move: function(distance){
+    moveOf: function(distance){
         var distance = [distance, 0].pick(),
             newTop = this.top + distance;
         this.moveTo(newTop);
@@ -74,8 +74,7 @@ var Scrollbar = new Class({
     },
     moveTo: function(top){
         var sizes = this.sizes;
-        if(top > 0) top = 0;
-        if(top < sizes.maxTop) top = sizes.maxTop;
+        top = top.limit(sizes.maxTop, 0);
         var buttonTop = (-top*sizes.ratio).limit(0, sizes.scrollBarInner);
         var correction = (buttonTop*sizes.ratio).limit(0, sizes.button);
         this.scroller.button.setStyle('top', buttonTop-correction);

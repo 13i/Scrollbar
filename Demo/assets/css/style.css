@@ -37,8 +37,7 @@ a {
 }
 
 #scrollbar {
-    width: 718px;
-    height: 248px;
+    width: 720px;
+    height: 250px;
     overflow-y: auto;
-    border: 1px solid #000;
 }
