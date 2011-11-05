@@ -15,9 +15,12 @@
 	margin-top: -1px;
 }
 .MooScroll-scrollbar {
-	background: #fcfcfc;
+    background: #fcfcfc;
 	width: 100%;
 	height: 100%;
+	position: relative;
+}
+.MooScroll-scrollbarInner {
 	position: relative;
 }
 .MooScroll-button {
@@ -28,7 +31,6 @@
 	left: 0;
 	z-index: 1;
 	width: 100%;
-	margin: 20px 0;
 	cursor: n-resize;
 }
 .MooScroll-tarrow {
