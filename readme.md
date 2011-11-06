@@ -39,7 +39,7 @@ In your `js` directory type:
 
 ## Installation
 
-We assume you have already included `Mootools` &amp Mootools
+We assume you have already included `Mootools` & `Mootools/Drag` in your page.
 
 In your `<HEAD>` :
 
@@ -67,12 +67,7 @@ In your `<BODY>` :
 
 ## Usage
 
-2. Include Mootools & Mootools/Drag in your page (if it's not already done)
-1. Include `scrollbar.css` in your `<head>`
-4. Include `scrollbar.js` in your `<head>`
-5. Include `scrollbar.js` in your `<body>`
 
-### 
 
 [PARAGRAPH EXPLAINING DIFFERENT WAYS TO CONFIGURE THE PLUGIN]
 
@@ -81,8 +76,8 @@ In your `<BODY>` :
 * [ONE OPTION] : [OPTION EXPLANATION]
 * [ANOTHER OPTION] : [OPTION EXPLANATION]
 * [YET ANOTHER OPTION]
-** [VALID PARAMETER]
-** [ANOTHER VALID PARAMETER]
+* [VALID PARAMETER]
+* [ANOTHER VALID PARAMETER]
 
 ## Todo
 
