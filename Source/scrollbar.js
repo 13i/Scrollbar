@@ -3,7 +3,7 @@ var Scrollbar = new Class({
     Implements: Options,
     options: {
         // Number of pixels the contents moves up adns down
-    	step: 10,
+        step: 10,
         // Interval between 2 moves
 		inrterval: 100
 	},
@@ -22,14 +22,14 @@ var Scrollbar = new Class({
         return this.setup();
 	},
     setup: function(){
-    	
-    	var o = this.options;
+        var o = this.options,
+            timer;
         
         // Store original values
         var originalPadding = this.element.getStyle('padding');
 		var html = this.element.get('html');
 		
-    	this.element.setStyles({ overflow: 'hidden', position: 'relative', padding: 0}).empty();
+        this.element.setStyles({ overflow: 'hidden', position: 'relative', padding: 0}).empty();
 		
         // Build elements
 		var elts = {};
@@ -93,7 +93,7 @@ var Scrollbar = new Class({
      * x can be positive or negative
      */
     update: function(){
-    	var elts = this.elements;
+        var elts = this.elements;
         var s = {
             content: elts.content.getSize().y,
             element: this.element.getSize().y,
@@ -120,8 +120,8 @@ var Scrollbar = new Class({
      */
     moveTo: function(top, updateButtonPosition){
         var sizes = this.sizes,
-        	elts = this.elements;
-    	top = [top, 0].pick().limit(sizes.maxTop, 0);
+            elts = this.elements;
+        top = [top, 0].pick().limit(sizes.maxTop, 0);
         if(updateButtonPosition){
             var buttonTop = -top*sizes.scrollbarRatio;
             elts.button.setStyle('top', buttonTop);
