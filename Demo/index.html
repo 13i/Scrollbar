@@ -4,6 +4,16 @@
     <meta charset="utf-8" />
     <title>Scrollbar demo</title>
     <link rel="stylesheet" href="assets/css/style.css" />
+    
+    <!-- Mootools -->
+    <script src="assets/js/mootools-core-1.4.1-full-nocompat-yc.js"></script>
+    <script src="assets/js/mootools-more-1.4.0.1.js"></script>
+    
+    <!-- Scrollbar -->
+    <link rel="stylesheet" href="../Source/scrollbar.css" />
+    <script src="../Source/scrollbar.js"></script>
+    
+    <script src="assets/js/demo.js"></script>
 </head>
 <body>
 <div id="left">
@@ -11,16 +21,57 @@
         <h1>Scrollbar demo</h1>
     </header>
     <nav>
-        <a href="1-simple/index.html" target="frame">Simple</a> 
-        <a href="1-simple/index.html" target="frame">Custom style</a>  
-        <a href="1-simple/index.html" target="frame">Events</a>
+        <a href="#demo1">Default</a> 
+        <a href="#demo2">Custom style</a>  
+        <a href="#demo3">Events</a>
     </nav>
     <footer>
         Created by <a href="http://13i.fr" name="Web design agency, Paris">13i</a>.
     </footer>
 </div>
 <div id="main">
-    <iframe src="1-simple/index.html" name="frame"></iframe>
+    <article id="demo1">
+        <h1>Default</h1>
+        <p>This example shows the default scrollbar.</p>
+        <section class="demo">
+            <h2>Example</h2>
+<div class="grabcode"><div id="demo1Scroller" class="scroller" style="height: 200px; overflow-y: auto;"></div>
+<script>
+window.addEvent('domready', function(){
+    new Scrollbar('demo1Scroller');
+});
+</script></div>
+        </section>
+        <section class="code"></section>
+    </article>
+    <article id="demo2">
+        <h1>Default</h1>
+        <p>This example shows the default scrollbar.</p>
+        <section class="demo">
+            <h2>Example</h2>
+<div class="grabcode"><div id="demo2Scroller" class="scroller" style="height: 200px; overflow-y: auto;"></div>
+<script>
+window.addEvent('domready', function(){
+    new Scrollbar('demo2Scroller');
+});
+</script></div>
+        </section>
+        <section class="code"></section>
+    </article>
+    <article id="demo3">
+        <h1>Default</h1>
+        <p>This example shows the default scrollbar.</p>
+        <section class="demo">
+            <h2>Example</h2>
+<div class="grabcode"><div id="demo3Scroller" class="scroller" style="height: 200px; overflow-y: auto;"></div>
+<script>
+window.addEvent('domready', function(){
+    new Scrollbar('demo3Scroller');
+});
+</script></div>
+        </section>
+        <section class="code"></section>
+    </article>
 </div>
 </body>
 </html>

@@ -5,14 +5,14 @@
 	position: relative;
 }
 .Scrollbar-content {
-	margin-right: 20px;
-	padding-top: 1px;
+    padding-top: 1px;
 	position: absolute;
 	top: 0;
 	left: 0;
+	width: 100%;
 }
 .Scrollbar-contentInner {
-	margin-top: -1px;
+	margin: -1px 20px 0 0;
 }
 .Scrollbar-scrollbar {
     background: #fcfcfc;

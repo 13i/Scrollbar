@@ -86,6 +86,11 @@ var Scrollbar = new Class({
             }.bind(this)
         });
         
+        this.element.addEvent('mousewheel', function(e){
+            e.preventDefault();
+            this.moveOf(e.wheel*o.step, true);
+        }.bind(this));
+        
         return this;
     },
     /**
