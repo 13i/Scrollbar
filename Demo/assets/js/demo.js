@@ -4,7 +4,7 @@ window.addEvent('domready', function(){
     $$('article').each(function(article, i){
         var source = article.getElement('.grabcode').get('html'),
             target = article.getElement('.code');
-        target.set('html', '<h2>Code</h2><pre><code>'+source.replace(/</g, '&lt;').replace(/class="scroller"/g, '')+'</code></pre>');
+        target.set('html', '<h2>Code</h2><pre class="prettyprint lang-html"><code>'+source.replace(/</g, '&lt;').replace(/class="scroller"/g, '')+'</code></pre>');
     });
     
     $$('.scroller').set(
@@ -20,4 +20,6 @@ window.addEvent('domready', function(){
     );
     
     new Fx.SmoothScroll();
+    
+    prettyPrint();
 });
