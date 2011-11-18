@@ -108,7 +108,7 @@ var Scrollbar = new Class({
         };
         s.scrollbarInner = s.scrollbar - (s.tArrow + s.bArrow);
         s.scrollbarRatio = s.scrollbarInner / s.content;
-        s.button = (s.element / s.content)*s.scrollbarInner;
+        s.button = ((s.element / s.content)*s.scrollbarInner).limit(0, s.scrollbarInner);
         s.maxTop = -(s.content - s.element);
         
         elts.scrollbar.setStyle('padding-top', s.tArrow);
